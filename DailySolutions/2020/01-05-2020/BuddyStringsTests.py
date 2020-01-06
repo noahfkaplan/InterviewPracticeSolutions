@@ -9,7 +9,7 @@ class BuddyStringsTests(unittest.TestCase):
         result = BuddyStrings.buddyStrings(A, B)
         self.assertEqual(result, False)
         
-    def test_returnsFalse_WhenStringsAreEqual(self):
+    def test_returnsFalse_WhenStringsAreEqualAndContainNoDuplicateLetters(self):
         A = 'ab'
         B = 'ab'
         result = BuddyStrings.buddyStrings(A, B)
@@ -20,6 +20,12 @@ class BuddyStringsTests(unittest.TestCase):
         B = 'abc'
         result = BuddyStrings.buddyStrings(A, B)
         self.assertEqual(result, False)
+
+    def test_returnsTrue_WhenStringsAreEqualAndContainDuplicateLetters(self):
+        A = 'aa'
+        B = 'aa'
+        result = BuddyStrings.buddyStrings(A, B)
+        self.assertEqual(result, True)
 
     def test_returnsTrue_WhenCharactersToBeSwappedNextToEachother(self):
         A = 'ab'

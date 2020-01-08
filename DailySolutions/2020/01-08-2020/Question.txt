@@ -4,6 +4,8 @@ For example, the input [3, 4, -1, 1] should return 2 because it is the smallest 
 
 Your solution should run in linear time and use constant space.
 
+*Was able to solve in linear time but not use constant space
+
 Here's your starting point:
 
 def first_missing_positive(nums):
